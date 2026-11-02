@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinan Rahman — Filmmaker, Video Editor & Creative Technologist</title>
+  <meta name="description" content="Sinan Rahman is an independent filmmaker, video editor, and creative technologist based in Kozhikode, Kerala, India. Available for global commissions, narrative directing, and post-production.">
+  <meta name="keywords" content="Sinan Rahman, filmmaker, video editor, cinematographer, Kerala, Kozhikode, DaVinci Resolve, portfolio">
+  <meta property="og:title" content="Sinan Rahman — Filmmaker & Creative Technologist">
+  <meta property="og:description" content="Synthesizing visual storytelling, dynamic pacing, and computational thinking into pure cinematic emotion.">
+  <meta property="og:type" content="website">
+
+  <!-- Preconnect -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed-dim": "#d0bcff",
+            "on-secondary-container": "#00424e",
+            "on-surface-variant": "#cbc3d7",
+            "background": "#131318",
+            "tertiary-container": "#e14ef6",
+            "secondary-fixed": "#acedff",
+            "inverse-surface": "#e4e1e9",
+            "surface-container-low": "#1b1b20",
+            "tertiary-fixed-dim": "#fbabff",
+            "surface-container-lowest": "#0e0e13",
+            "on-error": "#690005",
+            "surface": "#131318",
+            "on-surface": "#e4e1e9",
+            "surface-container": "#1f1f25",
+            "surface-dim": "#131318",
+            "on-secondary-fixed-variant": "#004e5c",
+            "on-error-container": "#ffdad6",
+            "error-container": "#93000a",
+            "secondary-container": "#03b5d3",
+            "on-tertiary-fixed": "#36003e",
+            "error": "#ffb4ab",
+            "primary": "#d0bcff",
+            "on-primary-fixed": "#23005c",
+            "inverse-on-surface": "#303036",
+            "on-tertiary": "#580065",
+            "on-tertiary-container": "#4d0059",
+            "on-primary": "#3c0091",
+            "inverse-primary": "#6d3bd7",
+            "surface-variant": "#35343a",
+            "outline": "#958ea0",
+            "on-secondary": "#003640",
+            "tertiary-fixed": "#ffd6fd",
+            "surface-tint": "#d0bcff",
+            "secondary": "#4cd7f6",
+            "primary-container": "#a078ff",
+            "surface-container-highest": "#35343a",
+            "secondary-fixed-dim": "#4cd7f6",
+            "outline-variant": "#494454",
+            "tertiary": "#fbabff",
+            "on-secondary-fixed": "#001f26",
+            "on-tertiary-fixed-variant": "#7c008e",
+            "on-primary-fixed-variant": "#5516be",
+            "primary-fixed": "#e9ddff",
+            "on-background": "#e4e1e9",
+            "surface-bright": "#39383e",
+            "surface-container-high": "#2a292f",
+            "on-primary-container": "#340080"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin": "1.25rem",
+            "margin-desktop": "4rem",
+            "space-lg": "1.75rem",
+            "gutter-desktop": "2.5rem",
+            "space-xl": "3rem"
+          },
+          fontFamily: {
+            "body-lg": ["Geist"],
+            "label-mono": ["Space Mono"],
+            "headline-lg": ["Syne"],
+            "headline-lg-mobile": ["Syne"],
+            "headline-sm": ["Syne"],
+            "label-mono-sm": ["Space Mono"],
+            "headline-md": ["Syne"],
+            "body-md": ["Geist"],
+            "headline-md-mobile": ["Syne"],
+            "body-sm": ["Geist"],
+            "display-xl-mobile": ["Syne"],
+            "display-xl": ["Syne"]
+          },
+          fontSize: {
+            "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "label-mono": ["12px", { lineHeight: "16px", letterSpacing: "0.12em", fontWeight: "700" }],
+            "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "headline-sm": ["22px", { lineHeight: "30px", letterSpacing: "0em", fontWeight: "600" }],
+            "label-mono-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.15em", fontWeight: "400" }],
+            "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "700" }],
+            "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "headline-md-mobile": ["24px", { lineHeight: "32px", letterSpacing: "0em", fontWeight: "700" }],
+            "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" }],
+            "display-xl-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "800" }],
+            "display-xl": ["72px", { lineHeight: "80px", letterSpacing: "-0.03em", fontWeight: "800" }]
+          },
+          animation: {
+            "fade-up": "fadeUp 0.6s ease forwards",
+            "fade-in": "fadeIn 0.5s ease forwards",
+          },
+          keyframes: {
+            fadeUp: {
+              "0%": { opacity: "0", transform: "translateY(24px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" }
+            },
+            fadeIn: {
+              "0%": { opacity: "0" },
+              "100%": { opacity: "1" }
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base resets */
+    @layer base {
+      html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    * { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Custom reveal animation */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* Noise texture overlay */
+    .noise::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* Gradient orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glow pulse on service cards */
+    .service-card { transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 0 30px -8px rgba(208,188,255,0.2); }
+
+    /* Mobile menu */
+    #mobile-menu {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(-8px);
+      opacity: 0;
+      pointer-events: none;
+    }
+    #mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Active nav indicator */
+    .nav-link.active {
+      background-color: #a078ff;
+      color: #340080;
+      border-radius: 9999px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-weight: 700;
+    }
+
+    /* Timeline skill bar */
+    .skill-bar-fill { transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
+
+    /* Hover glow on reel cards */
+    .reel-card:hover .play-btn { box-shadow: 0 0 24px rgba(208,188,255,0.5); }
+
+    /* Custom scrollbar for textarea */
+    textarea { resize: vertical; }
+
+    /* Line clamp utility */
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Tech grid background pattern */
+    .tech-grid {
+      background-image: linear-gradient(rgba(208,188,255,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(208,188,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen noise">
+
+  <!-- Background ambient orbs -->
+  <div class="orb w-96 h-96 bg-primary/10 top-0 right-1/4 -translate-y-1/2"></div>
+  <div class="orb w-80 h-80 bg-secondary/8 top-1/3 -left-32"></div>
+  <div class="orb w-64 h-64 bg-tertiary/6 bottom-1/4 right-0"></div>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 w-full flex items-center justify-center pt-space-md pointer-events-none">
+    <div class="pointer-events-auto w-[calc(100%-2.5rem)] max-w-7xl mx-auto h-20 px-gutter bg-surface-container-lowest/80 backdrop-blur-2xl rounded-full shadow-[0_0_35px_-5px_rgba(208,188,255,0.12)] flex items-center justify-between transition-all duration-300">
+      <!-- Logo -->
+      <div class="flex items-center gap-gutter">
+        <a class="flex items-center gap-space-sm group" href="#hero">
+          <span class="w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_12px_#4cd7f6]"></span>
+          <span class="font-headline-sm text-headline-sm tracking-tight text-on-surface group-hover:text-primary transition-colors">
+            SINAN RAHMAN <span class="font-label-mono text-label-mono text-primary">// STUDIO</span>
+          </span>
+        </a>
+        <div class="hidden xl:flex items-center gap-space-xs px-space-md py-1 bg-surface-container-high/60 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse shadow-[0_0_8px_#4cd7f6]"></span>
+          <span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary tracking-widest">Available for Freelance &amp; Directing</span>
+        </div>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-space-sm px-space-sm py-1 rounded-full bg-surface-container/50" id="desktop-nav">
+        <a id="nav-work" class="nav-link px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#work">Work</a>
+        <a id="nav-services" class="nav-link px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#services">Services</a>
+        <a id="nav-about" class="nav-link px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#about">About</a>
+        <a id="nav-technology" class="nav-link px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#technology">Technology</a>
+        <a id="nav-experience" class="nav-link px-space-md py-1.5 rounded-full font-label-mono text-label-mono uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" href="#experience">Experience</a>
+      </nav>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex items-center gap-space-md">
+        <a class="hidden sm:flex px-space-lg py-space-sm rounded-full bg-primary font-label-mono text-label-mono uppercase tracking-wider text-on-primary hover:bg-tertiary-container hover:text-white shadow-[0_0_24px_rgba(208,188,255,0.35)] transition-all duration-300" href="#contact">Let's Collaborate</a>
+        <!-- Mobile hamburger -->
+        <button id="hamburger-btn" class="lg:hidden w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:bg-surface-bright transition-colors" aria-label="Open menu">
+          <span class="material-symbols-outlined text-[20px]" id="hamburger-icon">menu</span>
+        </button>
+        <div class="hidden lg:flex w-8 h-8 rounded-full bg-primary items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu dropdown -->
+    <div id="mobile-menu" class="absolute top-full mt-2 w-[calc(100%-2.5rem)] max-w-7xl mx-auto bg-surface-container-lowest/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-outline-variant/30 overflow-hidden" style="left:50%;transform:translateX(-50%) translateY(-8px);">
+      <nav class="flex flex-col p-space-md gap-1">
+        <a class="mobile-nav-link font-label-mono text-label-mono uppercase px-space-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#work">Work</a>
+        <a class="mobile-nav-link font-label-mono text-label-mono uppercase px-space-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#services">Services</a>
+        <a class="mobile-nav-link font-label-mono text-label-mono uppercase px-space-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#about">About</a>
+        <a class="mobile-nav-link font-label-mono text-label-mono uppercase px-space-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#technology">Technology</a>
+        <a class="mobile-nav-link font-label-mono text-label-mono uppercase px-space-md py-3 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#experience">Experience</a>
+        <div class="border-t border-outline-variant/30 mt-2 pt-2">
+          <a class="block font-label-mono text-label-mono uppercase px-space-md py-3 rounded-xl bg-primary text-on-primary text-center hover:bg-primary-fixed transition-colors" href="#contact">Let's Collaborate</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="w-full pt-20 bg-background relative z-10">
+    <div class="w-full max-w-7xl mx-auto px-gutter py-space-xl flex flex-col gap-space-xl">
+
+      <!-- ===== HERO SECTION ===== -->
+      <section class="w-full pt-space-md pb-space-lg" id="hero">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+          <!-- Portrait -->
+          <div class="lg:col-span-5 reveal">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-gradient-to-t from-surface-container-lowest to-surface-container-low/40 shadow-2xl flex items-end justify-center group">
+              <img
+                alt="Sinan Rahman — Filmmaker and Video Editor"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out"
+                src="sr sin.png"
+                onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1WeX5bfxen0Coe4w7O1ByQIyljdBs3l9PTSKO6ASOhzrf5bAVOHRMl2KP71zm12QlbJS3tfGxK2LSCJn0rhfnH4L0MmQL71PQy8W5csVx6X2N5BTf2bjxJlN5sGSQ2gsoch3WPsJR9Ewj2o_YuxfF7HxQTOl3J16ij8tSQBYy-S7iRnbuaHzLHLibt3qcWJ2U_6_uEIYy3Tje9pIvKE3beATdPwqqVfa9bVZGlNu5c'"
+              >
+              <!-- Gradient vignette -->
+              <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-40 pointer-events-none"></div>
+              <!-- Label bar -->
+              <div class="absolute bottom-space-md left-space-md right-space-md flex items-center justify-between font-label-mono-sm text-label-mono-sm text-on-surface bg-surface-container-lowest/80 backdrop-blur-md px-space-md py-1.5 rounded-full">
+                <span>SINAN RAHMAN</span>
+                <span>VIDEOGRAPHER // EDITOR</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Text -->
+          <div class="lg:col-span-7 flex flex-col gap-space-md">
+            <div class="inline-flex items-center gap-2 reveal reveal-delay-1">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface-variant">Kozhikode, Kerala, India</span>
+            </div>
+
+            <h1 class="font-display-xl text-headline-lg-mobile lg:text-display-xl font-bold uppercase tracking-tight text-on-surface reveal reveal-delay-2">
+              Sinan<br>
+              <span class="text-primary" style="text-shadow: 0 0 80px rgba(208,188,255,0.4)">Rahman</span>
+            </h1>
+
+            <p class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight reveal reveal-delay-2">
+              Filmmaker, Video Editor &amp; Creative Technologist
+            </p>
+
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed reveal reveal-delay-3">
+              Synthesizing visual storytelling, dynamic pacing, and computational thinking into pure cinematic emotion. Available for global commissions, narrative directing, and post-production.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-space-md pt-space-sm reveal reveal-delay-3">
+              <a class="px-space-xl py-space-md rounded-full bg-primary text-on-primary font-label-mono text-label-mono uppercase tracking-wider font-bold hover:bg-primary-fixed hover:text-on-primary-fixed transition-all shadow-[0_0_24px_rgba(208,188,255,0.3)]" href="#work" id="cta-explore-work">Explore Work</a>
+              <a class="px-space-xl py-space-md rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono uppercase tracking-wider hover:bg-surface-bright transition-all" href="mailto:sinanrahmanmp@gmail.com" id="cta-get-in-touch">Get in Touch</a>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-space-lg pt-space-md font-label-mono-sm text-label-mono-sm text-outline border-t-2 border-surface-container-high reveal reveal-delay-4">
+              <div class="flex flex-col">
+                <span class="uppercase text-on-surface font-semibold">Focus</span>
+                <span>Cinematography &amp; Rhythm Editing</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="uppercase text-on-surface font-semibold">Primary Tool</span>
+                <span>DaVinci Resolve Studio</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="uppercase text-on-surface font-semibold">Education</span>
+                <span>Computer Science &amp; Data Science (MACE)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SELECTED REELS / WORK SECTION ===== -->
+      <section class="w-full pt-space-xl border-t-2 border-surface-container-high" id="work">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl reveal">
+          <div class="flex flex-col gap-space-xs">
+            <span class="font-label-mono text-label-mono uppercase tracking-widest text-primary">// Portfolio Showcase</span>
+            <h2 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-on-surface">Selected Reels</h2>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Curated short films, atmospheric travel sequences, and dynamic rhythm edits crafted for modern screens.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <!-- Reel Card 1 -->
+          <a class="reel-card group flex flex-col rounded-xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 reveal reveal-delay-1" href="https://www.instagram.com/reel/DVSrToviR1Y/" rel="noopener noreferrer" target="_blank" id="reel-horizon">
+            <div class="relative aspect-[9/13] overflow-hidden bg-surface-container-lowest">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBz12RI-kIwLq8LPmlchYwIXYbcoFjJpto3a1QjzKsmGWG4mlfHJVi65tb2gw5XZDz3SBLB5T_7t6bdZvddz_GCN07FnavMcYpBlTtMK-9l30GnovL188KgdqzOOiKtZWndwBSfandLZa1oCkIo8bC6f8qRt2KNFMmgfFNFT-DNVkMBBmRewPbcUrRlgPO6sCCzfXTeeqqt4C-lYUHdbKtPo24A2Vtkt9i0VSII4TqNxlT4GYizfK49gJGky7HOGJOEeFCNEW-w3ZYnAw');"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+              <div class="absolute top-space-md left-space-md right-space-md flex items-center justify-between">
+                <span class="px-space-sm py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Travel Film</span>
+                <span class="material-symbols-outlined text-primary text-lg">open_in_new</span>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="play-btn w-12 h-12 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-space-md flex flex-col gap-space-xs">
+              <span class="font-label-mono-sm text-label-mono-sm text-outline">00:45 REEL</span>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Cinematic Reel // Horizon</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Atmospheric landscape sequencing highlighting natural light grading and dynamic pacing.</p>
+            </div>
+          </a>
+
+          <!-- Reel Card 2 -->
+          <a class="reel-card group flex flex-col rounded-xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 reveal reveal-delay-2" href="https://www.instagram.com/reel/DPEpP75j1_7/" rel="noopener noreferrer" target="_blank" id="reel-nocturne">
+            <div class="relative aspect-[9/13] overflow-hidden bg-surface-container-lowest">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXS9VrOeHznHsEcrCnUzv0R7kUPcue2dtidABnGHRfNMOwy73Gaciuhq1VgstiFqzbrmI6K6tZDSUR0Q5fG6cR2e3EBYFrRg-CWE3dJ4MixH2vzCKyqnEodVDxLAY2Swlyy8XWf_ByfsD65rQIJGUUDzX_Zr23Mg6FjPfpv3Ixwsbj9FvjOrSoTU6ePABnxwjZagydRW2D79VSk7IOjQ6QURn1-WNxOxwlwiYUPVeZjTgdnYZX67xckcsgz9uYNOez3VSXSGL_xKPjzg');"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+              <div class="absolute top-space-md left-space-md right-space-md flex items-center justify-between">
+                <span class="px-space-sm py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Short Film &amp; Grade</span>
+                <span class="material-symbols-outlined text-secondary text-lg">open_in_new</span>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="play-btn w-12 h-12 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-secondary flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-space-md flex flex-col gap-space-xs">
+              <span class="font-label-mono-sm text-label-mono-sm text-outline">00:58 REEL</span>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Visual Odyssey // Nocturne</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Deep shadow recovery, rich chromatic contrast, and narrative tension exploring nighttime atmospheres.</p>
+            </div>
+          </a>
+
+          <!-- Reel Card 3 -->
+          <a class="reel-card group flex flex-col rounded-xl overflow-hidden bg-surface-container-low hover:bg-surface-container transition-all duration-300 reveal reveal-delay-3" href="https://www.instagram.com/reel/DW_8KaeDDYJ/" rel="noopener noreferrer" target="_blank" id="reel-electric">
+            <div class="relative aspect-[9/13] overflow-hidden bg-surface-container-lowest">
+              <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500 ease-out" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDc62KxBSTJZazhJL1fCEE661sD2l9AE7Te5RQP9JPinEPofAseFnoFv4yXkrVEiIjVOjeCCZsdb0RjOckc8t_WYH0SxiSNJ9LP8Md3xI_voel42JnRN7dB8salT5nZWs3KtkUhk1SSpovhWLmqu70CQNO-FYl7n3EWjh6SgTLImLX1yudcifnDlTZPeFPmE9rvqGsHzBlJ1UZNFHa0eO-RSW_fn5vngXniA7afwOGjlsURpcRFp0KJJAHa_3GkFF3EryWoCcqSSuxv7A');"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+              <div class="absolute top-space-md left-space-md right-space-md flex items-center justify-between">
+                <span class="px-space-sm py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Event &amp; Motion</span>
+                <span class="material-symbols-outlined text-tertiary text-lg">open_in_new</span>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="play-btn w-12 h-12 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-tertiary flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span class="material-symbols-outlined text-2xl">play_arrow</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-space-md flex flex-col gap-space-xs">
+              <span class="font-label-mono-sm text-label-mono-sm text-outline">01:12 REEL</span>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors">Motion &amp; Mood // Electric</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">High-tempo kinetic editing paired with custom audio sound design and impact transitions.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT SECTION ===== -->
+      <section class="w-full pt-space-xl border-t-2 border-surface-container-high" id="about">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+          <!-- Left Column -->
+          <div class="lg:col-span-5 flex flex-col gap-space-md reveal">
+            <span class="font-label-mono text-label-mono uppercase tracking-widest text-primary">// Editorial Profile</span>
+            <h2 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-on-surface">About Sinan</h2>
+            <div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs border border-outline-variant/20 hover:border-secondary/30 transition-colors">
+              <span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary font-bold">Milestone &amp; Mentorship</span>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface">Video Editing Basics Workshop</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Led an intensive hands-on masterclass mentoring 100+ creators on rhythm cutting, shot geometry, and timeline pacing.</p>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="lg:col-span-7 flex flex-col gap-space-md reveal reveal-delay-2">
+            <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">I am an independent filmmaker, video editor, and creative technologist based in Kozhikode, Kerala. Currently pursuing a <strong class="font-semibold text-primary">B.Tech in Computer Science (Data Science)</strong> at Mar Athanasius College of Engineering.</p>
+            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Combining directorial instincts with algorithmic discipline, my editing methodology focuses on psychological rhythm, tone control, and seamless montage construction. Every frame is a decision; every cut, an intention.</p>
+
+            <div class="flex flex-col gap-space-xs pt-space-sm">
+              <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-outline">Core Skills &amp; Tools</span>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono text-xs hover:bg-primary/20 hover:text-primary transition-colors cursor-default">DaVinci Resolve Studio</span>
+                <span class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono text-xs hover:bg-primary/20 hover:text-primary transition-colors cursor-default">Sony Cinema Line</span>
+                <span class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono text-xs hover:bg-secondary/20 hover:text-secondary transition-colors cursor-default">CapCut Social Motion</span>
+                <span class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono text-xs hover:bg-secondary/20 hover:text-secondary transition-colors cursor-default">Visual Storytelling</span>
+                <span class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono text-xs hover:bg-tertiary/20 hover:text-tertiary transition-colors cursor-default">Creative Direction</span>
+                <span class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono text-xs hover:bg-tertiary/20 hover:text-tertiary transition-colors cursor-default">Data Science &amp; Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES SECTION ===== -->
+      <section class="w-full pt-space-xl border-t-2 border-surface-container-high" id="services">
+        <div class="flex flex-col gap-space-xs mb-space-lg reveal">
+          <span class="font-label-mono text-label-mono uppercase tracking-widest text-primary">// Capabilities</span>
+          <h2 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-on-surface">Creative Services</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+          <div class="service-card p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs border border-transparent hover:border-primary/20 reveal reveal-delay-1" id="service-filmmaking">
+            <span class="font-label-mono-sm text-label-mono-sm text-primary">01</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Cinematic Filmmaking</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Full directorial vision, cinematography, and prime glass visual composition.</p>
+          </div>
+          <div class="service-card p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs border border-transparent hover:border-secondary/20 reveal reveal-delay-2" id="service-editing">
+            <span class="font-label-mono-sm text-label-mono-sm text-secondary">02</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Video Editing &amp; Pacing</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Precision timeline rhythm, invisible montage cutting, and sound design.</p>
+          </div>
+          <div class="service-card p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs border border-transparent hover:border-tertiary/20 reveal reveal-delay-3" id="service-shortfilms">
+            <span class="font-label-mono-sm text-label-mono-sm text-tertiary">03</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Short Films</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Original narrative development exploring human conflict and poetic visual storytelling.</p>
+          </div>
+          <div class="service-card p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs border border-transparent hover:border-primary/20 reveal reveal-delay-1" id="service-promotional">
+            <span class="font-label-mono-sm text-label-mono-sm text-primary">04</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Promotional Videos</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">High-impact brand videos, commercial teasers, and social-first storytelling.</p>
+          </div>
+          <div class="service-card p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs border border-transparent hover:border-secondary/20 reveal reveal-delay-2" id="service-travel">
+            <span class="font-label-mono-sm text-label-mono-sm text-secondary">05</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Travel Films</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Evocative location-based vignettes with atmospheric grading and audio textures.</p>
+          </div>
+          <div class="service-card p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs border border-transparent hover:border-tertiary/20 reveal reveal-delay-3" id="service-wedding">
+            <span class="font-label-mono-sm text-label-mono-sm text-tertiary">06</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">Wedding &amp; Events</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Documentary truth, cinematic elegance, and heartfelt unscripted memories.</p>
+          </div>
+        </div>
+
+        <!-- Featured Project -->
+        <div class="mt-space-lg p-space-lg rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md border border-secondary/20 reveal">
+          <div class="flex flex-col gap-space-xs max-w-2xl">
+            <span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary font-bold">Featured Project</span>
+            <h3 class="font-headline-sm text-headline-sm text-on-surface">WaveGuard // Coastal Early Warning System</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">An IoT-based dual-horizon early warning system for Kallakkadal (swell surges along the Kerala coast), synthesizing pressure sensors, satellite feeds, and GSM telemetry.</p>
+          </div>
+          <span class="px-space-md py-1 rounded-full bg-surface-container-high text-xs font-label-mono text-secondary self-start md:self-center whitespace-nowrap">Data Science / IoT</span>
+        </div>
+      </section>
+
+      <!-- ===== TECHNOLOGY SECTION ===== -->
+      <section class="w-full pt-space-xl border-t-2 border-surface-container-high tech-grid" id="technology">
+        <div class="flex flex-col gap-space-xs mb-space-lg reveal">
+          <span class="font-label-mono text-label-mono uppercase tracking-widest text-primary">// Arsenal &amp; Pipeline</span>
+          <h2 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-on-surface">Creative Technology</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">The hardware, software, and computational pipelines powering every frame, cut, and creative decision.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter mb-space-lg">
+          <!-- Software Stack -->
+          <div class="rounded-xl bg-surface-container-low p-space-lg flex flex-col gap-space-md border border-outline-variant/20 reveal reveal-delay-1">
+            <div class="flex items-center gap-space-sm">
+              <span class="material-symbols-outlined text-primary">movie_edit</span>
+              <span class="font-label-mono text-label-mono uppercase tracking-widest text-primary">Software Stack</span>
+            </div>
+            <div class="flex flex-col gap-space-md">
+              <!-- Skill items -->
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">
+                  <span>DaVinci Resolve Studio</span><span class="text-primary">95%</span>
+                </div>
+                <div class="h-1 rounded-full bg-surface-container-high overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full skill-bar-fill" data-width="95%" style="width:0%"></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">
+                  <span>CapCut / Social Motion</span><span class="text-secondary">88%</span>
+                </div>
+                <div class="h-1 rounded-full bg-surface-container-high overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-secondary to-tertiary rounded-full skill-bar-fill" data-width="88%" style="width:0%"></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">
+                  <span>Python / Data Science</span><span class="text-tertiary">80%</span>
+                </div>
+                <div class="h-1 rounded-full bg-surface-container-high overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-tertiary to-primary rounded-full skill-bar-fill" data-width="80%" style="width:0%"></div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex justify-between font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">
+                  <span>Color Grading / LUT Design</span><span class="text-primary">90%</span>
+                </div>
+                <div class="h-1 rounded-full bg-surface-container-high overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-tertiary rounded-full skill-bar-fill" data-width="90%" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hardware Rig -->
+          <div class="rounded-xl bg-surface-container-low p-space-lg flex flex-col gap-space-md border border-outline-variant/20 reveal reveal-delay-2">
+            <div class="flex items-center gap-space-sm">
+              <span class="material-symbols-outlined text-secondary">videocam</span>
+              <span class="font-label-mono text-label-mono uppercase tracking-widest text-secondary">Hardware Rig</span>
+            </div>
+            <div class="grid grid-cols-1 gap-space-sm">
+              <div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container border border-outline-variant/10 hover:border-secondary/30 transition-colors">
+                <span class="material-symbols-outlined text-secondary text-xl shrink-0">camera</span>
+                <div>
+                  <div class="font-label-mono text-label-mono text-on-surface uppercase">Sony Cinema Line</div>
+                  <div class="font-body-sm text-body-sm text-on-surface-variant">Primary shooting platform — natural log profiles, S-Cinetone grading</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container border border-outline-variant/10 hover:border-primary/30 transition-colors">
+                <span class="material-symbols-outlined text-primary text-xl shrink-0">computer</span>
+                <div>
+                  <div class="font-label-mono text-label-mono text-on-surface uppercase">Editing Workstation</div>
+                  <div class="font-body-sm text-body-sm text-on-surface-variant">High-performance desktop rig calibrated for 4K timeline playback</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-md p-space-md rounded-xl bg-surface-container border border-outline-variant/10 hover:border-tertiary/30 transition-colors">
+                <span class="material-symbols-outlined text-tertiary text-xl shrink-0">tune</span>
+                <div>
+                  <div class="font-label-mono text-label-mono text-on-surface uppercase">Audio &amp; Sound Design</div>
+                  <div class="font-body-sm text-body-sm text-on-surface-variant">Field audio capture, Foley layering, and frequency mastering</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- IoT / Data Science Banner -->
+        <div class="rounded-xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-space-lg border border-outline-variant/20 reveal">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+            <div class="flex flex-col gap-space-xs">
+              <span class="font-label-mono-sm text-label-mono-sm uppercase text-tertiary font-bold">Interdisciplinary</span>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Film × Code Pipeline</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">Blending cinematic craft with computational thinking — from data visualization scripts to real-time sensor-driven systems powering the WaveGuard project.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 shrink-0">
+              <span class="px-space-md py-1 rounded-full bg-surface-container-high font-label-mono-sm text-label-mono-sm text-tertiary uppercase">IoT</span>
+              <span class="px-space-md py-1 rounded-full bg-surface-container-high font-label-mono-sm text-label-mono-sm text-primary uppercase">Python</span>
+              <span class="px-space-md py-1 rounded-full bg-surface-container-high font-label-mono-sm text-label-mono-sm text-secondary uppercase">Data Science</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE SECTION ===== -->
+      <section class="w-full pt-space-xl border-t-2 border-surface-container-high" id="experience">
+        <div class="flex flex-col gap-space-xs mb-space-lg reveal">
+          <span class="font-label-mono text-label-mono uppercase tracking-widest text-primary">// Curriculum Vitae</span>
+          <h2 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-on-surface">Experience</h2>
+        </div>
+
+        <div class="flex flex-col gap-space-md">
+          <!-- Experience Item 1 -->
+          <div class="relative p-space-lg rounded-xl bg-surface-container-low border border-outline-variant/20 hover:border-primary/25 transition-all group reveal reveal-delay-1">
+            <div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-space-sm">
+                  <span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-primary uppercase tracking-widest">2023 — Present</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Independent Filmmaker &amp; Video Editor</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Self-directed — Kozhikode, Kerala</p>
+              </div>
+              <span class="px-space-md py-1 rounded-full bg-surface-container-high font-label-mono-sm text-label-mono-sm text-primary uppercase self-start shrink-0">Freelance</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-space-md leading-relaxed">Producing cinematic travel films, event coverage, promotional reels, and short-form narrative content. Specializing in DaVinci Resolve color grading and rhythm-driven montage editing for social media and broadcast.</p>
+            <div class="flex flex-wrap gap-2 mt-space-md">
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">DaVinci Resolve</span>
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Sony Cinema</span>
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Color Grading</span>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="relative p-space-lg rounded-xl bg-surface-container-low border border-outline-variant/20 hover:border-secondary/25 transition-all group reveal reveal-delay-2">
+            <div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-space-sm">
+                  <span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-widest">2024</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors">Workshop Instructor — Video Editing Basics</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Mar Athanasius College of Engineering — Kothamangalam</p>
+              </div>
+              <span class="px-space-md py-1 rounded-full bg-surface-container-high font-label-mono-sm text-label-mono-sm text-secondary uppercase self-start shrink-0">Mentorship</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-space-md leading-relaxed">Led an intensive hands-on masterclass mentoring 100+ student creators on rhythm cutting, shot geometry, timeline pacing, and the fundamentals of cinematic storytelling. Covered both technical and philosophical approaches to the edit.</p>
+            <div class="flex flex-wrap gap-2 mt-space-md">
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Workshop</span>
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">100+ Attendees</span>
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Editing Theory</span>
+            </div>
+          </div>
+
+          <!-- Experience Item 3 -->
+          <div class="relative p-space-lg rounded-xl bg-surface-container-low border border-outline-variant/20 hover:border-tertiary/25 transition-all group reveal reveal-delay-3">
+            <div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-space-sm">
+                  <span class="w-2 h-2 rounded-full bg-tertiary shrink-0"></span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-tertiary uppercase tracking-widest">2023 — Present</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors">B.Tech — Computer Science &amp; Engineering (Data Science)</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Mar Athanasius College of Engineering (MACE) — Kothamangalam, Kerala</p>
+              </div>
+              <span class="px-space-md py-1 rounded-full bg-surface-container-high font-label-mono-sm text-label-mono-sm text-tertiary uppercase self-start shrink-0">Education</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-space-md leading-relaxed">Pursuing a rigorous engineering curriculum combining algorithmic foundations, machine learning, data analytics, and computational systems design. Bridging academic research with cinematic practice through the WaveGuard IoT project.</p>
+            <div class="flex flex-wrap gap-2 mt-space-md">
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Python</span>
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">Machine Learning</span>
+              <span class="px-3 py-1 rounded-full bg-surface-container font-label-mono-sm text-label-mono-sm text-on-surface-variant uppercase">IoT Systems</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT SECTION ===== -->
+      <section class="w-full pt-space-xl pb-space-lg border-t-2 border-surface-container-high" id="contact">
+        <div class="flex flex-col items-center text-center gap-space-md max-w-2xl mx-auto reveal">
+          <span class="font-label-mono text-label-mono uppercase tracking-widest text-primary">// Let's Work Together</span>
+          <h2 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-on-surface">Ready to Bring Your Story to Life?</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">Available for freelance cinematography, video editing contracts, and creative collaborations globally.</p>
+          <div class="flex flex-wrap items-center justify-center gap-space-md pt-space-sm">
+            <a class="px-space-xl py-space-md rounded-full bg-primary text-on-primary font-label-mono text-label-mono uppercase tracking-wider font-bold hover:bg-primary-fixed hover:text-on-primary-fixed transition-all flex items-center gap-2 shadow-[0_0_30px_rgba(208,188,255,0.35)]" href="mailto:sinanrahmanmp@gmail.com" id="contact-email">
+              <span class="material-symbols-outlined text-lg">mail</span>
+              <span>sinanrahmanmp@gmail.com</span>
+            </a>
+            <a class="px-space-xl py-space-md rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono uppercase tracking-wider hover:bg-surface-bright transition-all flex items-center gap-2" href="https://www.instagram.com/sr_sinnn/" rel="noopener noreferrer" target="_blank" id="contact-instagram">
+              <span class="material-symbols-outlined text-lg">photo_camera</span>
+              <span>@sr_sinnn</span>
+            </a>
+            <a class="px-space-xl py-space-md rounded-full bg-surface-container-high text-on-surface font-label-mono text-label-mono uppercase tracking-wider hover:bg-surface-bright transition-all flex items-center gap-2" href="https://www.linkedin.com/in/sinan-rahman-m-p-2279a2427/" rel="noopener noreferrer" target="_blank" id="contact-linkedin">
+              <span class="material-symbols-outlined text-lg">badge</span>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="w-full bg-surface-container-lowest mt-space-xl pt-space-xl pb-space-lg relative z-10">
+    <div class="w-full max-w-7xl mx-auto px-gutter flex flex-col gap-space-xl">
+
+      <!-- Footer Top -->
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-gutter pb-space-lg border-b border-outline-variant/20">
+        <div class="flex flex-col gap-space-sm max-w-xl">
+          <h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Auteur Filmmaking at the Vanguard of Digital Reality.</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">Synthesizing high-concept visual storytelling with generative pipelines, real-time spatial computing, and bespoke camera engineering.</p>
+        </div>
+        <div class="flex flex-col items-start lg:items-end gap-space-xs">
+          <span class="font-label-mono-sm text-label-mono-sm uppercase text-outline tracking-widest">Studio Coordinates</span>
+          <span class="font-label-mono text-label-mono text-secondary tracking-wider">Kozhikode, Kerala, India (11.2588° N, 75.7804° E)</span>
+          <a class="font-headline-sm text-headline-sm text-primary hover:text-tertiary transition-colors tracking-tight" href="mailto:sinanrahmanmp@gmail.com">sinanrahmanmp@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Footer Links Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter py-space-lg bg-surface-container-low/40 rounded-xl px-gutter">
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-outline">Direct Navigation</span>
+          <div class="flex flex-col gap-space-xs">
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#work">Selected Works</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#services">Production Capabilities</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#about">Studio Manifesto</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-outline">Systems &amp; Lab</span>
+          <div class="flex flex-col gap-space-xs">
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#technology">Creative Technology</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#experience">Curriculum Vitae</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#contact">Project Dispatch</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-outline">Network &amp; Transmissions</span>
+          <div class="flex flex-col gap-space-xs">
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="https://www.instagram.com/sr_sinnn/" rel="noopener noreferrer" target="_blank">Instagram / @sr_sinnn</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="https://www.linkedin.com/in/sinan-rahman-m-p-2279a2427/" rel="noopener noreferrer" target="_blank">LinkedIn / Sinan Rahman M P</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="mailto:sinanrahmanmp@gmail.com">Direct Mail Dispatch</a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-label-mono-sm text-label-mono-sm uppercase tracking-widest text-outline">Status &amp; Dispatch</span>
+          <div class="flex items-center gap-space-xs">
+            <span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+            <span class="font-label-mono-sm text-label-mono-sm uppercase text-secondary font-bold">Accepting Commissions</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Directing, narrative commercial reels, and spatial technology pipelines worldwide.</p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-space-md pt-space-md">
+        <p class="font-label-mono-sm text-label-mono-sm text-outline uppercase">© 2025 Sinan Rahman Studio. All Rights Reserved.</p>
+        <div class="flex items-center gap-gutter">
+          <span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Calibrated for Cinema 4K</span>
+          <span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Index Spec: Film × Code</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // ── Mobile Menu Toggle ──────────────────────────────────────────────
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMenu(open) {
+      if (open) {
+        mobileMenu.classList.add('open');
+        hamburgerIcon.textContent = 'close';
+      } else {
+        mobileMenu.classList.remove('open');
+        hamburgerIcon.textContent = 'menu';
+      }
+    }
+
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = mobileMenu.classList.contains('open');
+      toggleMenu(!isOpen);
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => toggleMenu(false));
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        toggleMenu(false);
+      }
+    });
+
+    // ── Active Nav Highlight on Scroll ─────────────────────────────────
+    const sections = ['hero', 'work', 'services', 'about', 'technology', 'experience', 'contact'];
+    const navLinks = {
+      work: document.getElementById('nav-work'),
+      services: document.getElementById('nav-services'),
+      about: document.getElementById('nav-about'),
+      technology: document.getElementById('nav-technology'),
+      experience: document.getElementById('nav-experience'),
+    };
+
+    function updateActiveNav() {
+      let current = 'work';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 120) current = id;
+        }
+      });
+
+      Object.keys(navLinks).forEach(id => {
+        const link = navLinks[id];
+        if (!link) return;
+        if (id === current) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    // ── Scroll Reveal Animation ─────────────────────────────────────────
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ── Skill Bar Animation ─────────────────────────────────────────────
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          bar.style.width = bar.dataset.width;
+          skillObserver.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(bar => skillObserver.observe(bar));
+
+    // ── Smooth Anchor Scrolling (with header offset) ────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          const offset = 100;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ── Header shrink on scroll ─────────────────────────────────────────
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('pt-2');
+        header.classList.remove('pt-space-md');
+      } else {
+        header.classList.remove('pt-2');
+        header.classList.add('pt-space-md');
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>
